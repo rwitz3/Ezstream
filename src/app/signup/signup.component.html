@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <h2 style="text-align:center;">{{title}}</h2>
+    <form #form="ngForm" (ngSubmit)="form.valid&& registerUser()" style="background-color: rgb(151, 218, 233);">
+        <div><label>Name</label>
+            <input type="text" name="name" class="form-control" required #name="ngModel" [(ngModel)]="signupCred.name">
+            <small class="text-danger" *ngIf="form.submitted&&name.errors?.['required']">*Mandatroy Fields</small>
+            </div>
+        <div><label>Email</label>
+            <input type="text" name="email" class="form-control" required #email="ngModel"  [(ngModel)]="signupCred.email">
+            <small class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">*Mandatroy Fields</small>
+            <small class="text-danger" *ngIf="form.submitted&&email.errors?.['pattern']">*Invalid Email</small> -->
+
+            </div>   
+        <div><label>Mobile Number</label>
+            <input type="number" name="mob_number" class="form-control" required #mob_number="ngModel" pattern="^[0-9]{10}$" [(ngModel)]="signupCred.mob_number">
+            <small class="text-danger" *ngIf="form.submitted&&mob_number.errors?.['required']">*Mandatroy Fields</small>
+            <small class="text-danger" *ngIf="form.submitted&&mob_number.errors?.['pattern']">*Invalid Mobile Nubmer</small>
+            </div>    
+        <div><label>Password</label>
+            <input type="password" name="password" class="form-control" required #password="ngModel" [(ngModel)]="signupCred.password">
+            <small class="text-danger" *ngIf="form.submitted&&password.errors?.['required']">*Mandatroy Fields</small>
+            </div>
+        <!-- <div><label>Confirm Password</label>
+            <input type="password" name="re_password" class="form-control" required #re_password="ngModel" [(ngModel)]="signupCred.re_password">
+            <small class="text-danger" *ngIf="form.submitted&&re_password.errors?.['required']">*Mandatroy Fields</small>
+            </div>      -->
+        <a routerLink="/login">Already Signed Up!? Click to LogIn</a>    
+        <br>
+        <button type="submit" class="btn btn-primary" >Submit</button>                     
+    </form> 
+    <!-- <form  #form="ngForm" (ngSubmit)="form.valid && registerUser()" style="background-color: rgb(151, 218, 233);" >
+        <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" name="name"  #name="ngModel"  [(ngModel)]="signupCred.name" class="form-control rounded-0" required>
+        <small class="text-danger" *ngIf="form.submitted && name.errors?.['required']">*Mandatroy Fields</small>
+        </div>
+        <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" name="email" #email="ngModel" pattern="[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}" [(ngModel)]="signupCred.email" class="form-control rounded-0" required>
+        <small class="text-danger" *ngIf="form.submitted&&email.errors?.['pattern']">*Invalid Email</small> 
+        <small class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">*Mandatroy Fields</small>
+        </div>
+        <div class="form-group">
+        <label for="">Mobile Number</label>
+        <input type="number" name="mob_number" #mob_number="ngModel"  [(ngModel)]="signupCred.mob_number" class="form-control rounded-0" pattern="^[0-9]{10}$"  required>
+        <small class="text-danger" *ngIf="form.submitted&&mob_number.errors?.['required']">*Mandatroy Fields</small>
+        <small class="text-danger" *ngIf="form.submitted&&mob_number.errors?.['pattern']">*Invalid Mobile Nubmer</small>
+        </div>
+        <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" name="password" #password="ngModel" [(ngModel)]="signupCred.password" class="form-control rounded-0" required>
+        <small class="text-danger" *ngIf="form.submitted&&password.errors?.['required']">*Mandatroy Fields</small>
+        </div>
+        <br>
+        <a routerLink="/login" >Already Signed Up!? Click to LogIn</a> 
+        <div>
+            <button class="btn  btn-primary" type="submit" >Register</button>
+        </div>
+        
+    </form> -->
+</div>
+
+<!-- pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" -->

@@ -1,0 +1,17 @@
+.container-fluid{
+    background-color: beige;
+    height: 640px;
+}
+h2{
+    padding-top: 20px;
+}
+form{
+    width: 740px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn {
+    position: relative;
+    margin-left: 45%;
+}

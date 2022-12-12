@@ -1,0 +1,23 @@
+/* h1{
+    margin-left: 1px;
+}
+img{
+    margin-left: 35px;
+} */
+.nav-link{
+ position: relative;
+ margin-left: 18cm;
+ font-size: larger;
+ 
+ 
+    }
+a{
+    color: aliceblue;
+    text-decoration: none;
+    
+}a:hover{
+    color: rgb(94, 78, 96);
+}
+.btn{
+    margin-right: 5px;
+}
